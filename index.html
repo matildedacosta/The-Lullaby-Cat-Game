@@ -4,9 +4,75 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>The Sleeping Cat</title>
   </head>
   <body>
-    <h1>The Sleeping Cat Game</h1>
+    <header><h1>The Sleeping Cat Game</h1></header>
+
+    <main>
+      <div class="instructions">
+        <h2>RULES OF THE GAME</h2>
+        <ul class="game-rules">
+          <li>
+            🐾 Press the key in the computer that represents the musical note
+            asked in the question.
+          </li>
+          <li>
+            🐾 Every question <em>right</em>: the cat moves a step closer to the
+            bed.
+          </li>
+          <li>
+            🐾 Every question <em>wrong</em> the cat moves a step backward.
+          </li>
+          <li>🐾 Three questions wrong: <em>GAME OVER</em>.</li>
+          <li>
+            🐾 If you answer 9 questions correctly: the cat goes to sleep and
+            <em>YOU WIN</em>.
+          </li>
+          <li id="center-li">
+            <br />
+            <em><b>NOTE: ANSWER EACH QUESTION IN LESS THAN 10 SECONDS.</b></em>
+          </li>
+          <li>
+            <img
+              src="./docs/assets/images/Piano.jpg"
+              alt="piano-keyboard"
+              id="piano"
+            />
+          </li>
+          <!--   <li>
+            The letters in the piano above are representative of the location of
+            the musical notes.
+          </li> -->
+        </ul>
+      </div>
+      <div id="start-screen">
+        <button id="start-button">
+          <img src="/docs/assets/images/start-button.png" alt="button" />
+        </button>
+      </div>
+
+      <div id="win-screen">
+        <h1>YOU WIN!</h1>
+        <button id="restart-button">
+          <img src="/docs/assets/images/restart.png" alt="button" />
+        </button>
+      </div>
+
+      <div id="lose-screen">
+        <h1>YOU LOSE!</h1>
+        <button id="restart-button1">
+          <img src="/docs/assets/images/restart.png" alt="button" />
+        </button>
+      </div>
+
+      <div class="game-canvas">
+        <canvas id="canvas" width="950" height="700"></canvas>
+      </div>
+    </main>
+    <script src="/js/controls.js"></script>
+    <script src="/js/elements.js"></script>
+    <script src="/js/game.js"></script>
   </body>
 </html>
