@@ -41,11 +41,9 @@
               id="piano"
             />
           </li>
-          <!--   <li>
-            The letters in the piano above are representative of the location of
-            the musical notes.
-          </li> -->
         </ul>
+
+        <!-- START SCREEN -->
       </div>
       <section id="start-screen">
         <button id="start-button">
@@ -53,6 +51,7 @@
         </button>
       </section>
 
+      <!-- LEVELS SCREEN -->
       <section id="levels-screen">
         <h3>Choose your level:</h3>
         <div id="level-buttons">
@@ -75,10 +74,11 @@
         </div>
       </section>
 
-      <section id="win-screen">
+      <!-- LEVEL ONE -->
+      <section id="win-level1-screen">
         <h1>YOU WIN!</h1>
         <div class="level1-win-buttons">
-          <button id="restart-win-button">
+          <button id="restart-level1-win-button">
             <img src="/docs/assets/images/restart.png" alt="button" />
           </button>
           <button id="next-level2">
@@ -91,18 +91,53 @@
         </div>
       </section>
 
-      <section id="lose-screen">
+      <section id="lose-level1-screen">
         <h1>YOU LOSE!</h1>
-        <button id="restart-lose-button">
+        <button id="restart-level1-lose-button">
           <img src="/docs/assets/images/restart.png" alt="button" />
         </button>
       </section>
 
+      <!--LEVEL TWO -->
+
+      <section id="win-level2-screen">
+        <h1>YOU WIN!</h1>
+        <div class="level-win-buttons">
+          <button id="restart-win-level2-button">
+            <img src="/docs/assets/images/restart.png" alt="button" />
+          </button>
+          <button id="back-level1">
+            <img
+              class="buttons"
+              src="/docs/assets/images/level1.png"
+              alt="button"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section id="lose-level2-screen">
+        <h1>YOU LOSE!</h1>
+        <button id="restart-lose-level2-button">
+          <img src="/docs/assets/images/restart.png" alt="button" />
+        </button>
+        <button id="back-to-level1-button">
+          <img
+            class="buttons"
+            src="/docs/assets/images/level1.png"
+            alt="button"
+          />
+        </button>
+      </section>
+
+      <!-- CANVAS -->
       <div class="game-canvas">
         <canvas id="canvas" width="950" height="700"></canvas>
       </div>
     </main>
-    <script src="/js/levels.js"></script>
+
+    <!-- JAVASCRIPT LINKS -->
+    <script src="/js/questions.js"></script>
     <script src="/js/controls.js"></script>
     <script src="/js/elements.js"></script>
     <script src="/js/game.js"></script>

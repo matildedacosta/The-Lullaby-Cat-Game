@@ -3,7 +3,7 @@
 //Adicionar sons
 
 class Game {
-  constructor(initialQuestions) {
+  constructor(initialQuestions, level, font) {
     this.canvas = document.getElementById("canvas");
     this.ctx = this.canvas.getContext("2d");
     this.x = 0;
@@ -20,6 +20,8 @@ class Game {
     this.askedQuestions = 0;
     this.intervalId = null;
     this.questionTime = 0;
+    this.level = level;
+    this.font = font;
   }
 
   update() {
@@ -30,9 +32,7 @@ class Game {
     this.drawQuestions(this.questions[this.askedQuestions]);
     this.drawScore();
     this.drawTimer(Math.floor(this.questionTime / 60));
-    if (this.questionTime > 600) {
-      this.isWrong();
-    }
+    this.checkLevels();
     this.checkGameover();
     this.checkWin();
   }
@@ -47,6 +47,18 @@ class Game {
     this.intervalId = setInterval(() => {
       this.update();
     }, 1000 / 60);
+  }
+
+  checkLevels() {
+    if (this.level === 1) {
+      if (this.questionTime > 600) {
+        this.isWrong();
+      }
+    } else if (this.level === 2) {
+      if (this.questionTime > 1200) {
+        this.isWrong();
+      }
+    }
   }
 
   isCorrect() {
@@ -73,7 +85,9 @@ class Game {
   }
 
   checkGameover() {
-    const loseScreen = document.getElementById("lose-screen");
+    if (this.level === 1) {
+      const loseScreenLevel1 = document.getElementById("lose-level1-screen");
+    }
     if (this.wrongQuestions >= 3) {
       this.canvas.style.display = "none";
       loseScreen.style.display = "flex";
@@ -85,10 +99,15 @@ class Game {
   }
 
   checkWin() {
-    const winScreen = document.getElementById("win-screen");
+    if (this.level === 1) {
+      const winScreenLevel1 = document.getElementById("win-level1-screen");
+      /* else if (this.level === 2){
+      const winScreenlevel2 = document.getElementById("win-screen");
+    } */
+    }
     if (this.rightQuestions >= 9) {
       this.canvas.style.display = "none";
-      winScreen.style.display = "flex";
+      winScreenLevel1.style.display = "flex";
       this.sound.src = "/docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
@@ -101,7 +120,7 @@ class Game {
   }
 
   drawQuestions(question) {
-    this.ctx.font = "50px VT323";
+    this.ctx.font = this.font;
     this.ctx.fillStyle = "white";
     this.ctx.fillText(question.question, 235, 350);
   }

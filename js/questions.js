@@ -1,3 +1,4 @@
+//Questions
 const levelOneQuestions = [
   { question: "Press the musical note C", answer: "A" },
   { question: "Press the musical note C#/Db", answer: "W" },
@@ -63,4 +64,3 @@ const levelTwoQuestions = [
     answer: "T",
   },
 ];
-

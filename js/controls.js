@@ -1,16 +1,23 @@
-const startButton = document.getElementById("start-button");
+/* SCREENS */
 const startScreen = document.getElementById("start-screen");
-const restartWinButton = document.getElementById("restart-win-button");
-const restartLoseButton = document.getElementById("restart-lose-button");
-const winScreen = document.getElementById("win-level1-screen");
-const loseScreen = document.getElementById("lose-screen");
+const winScreenLevel1 = document.getElementById("win-level1-screen");
+const loseScreenLevel1 = document.getElementById("lose-level1-screen");
 const levelsScreen = document.getElementById("levels-screen");
+
+/* BUTTONS */
+const startButton = document.getElementById("start-button");
 const level1Button = document.getElementById("level1-button");
 const level2Button = document.getElementById("level2-button");
-const nextLevel2 = document.getElementById("next-level2");
+const nextLevel2Button = document.getElementById("next-level2");
+const restartLevel1WinButton = document.getElementById(
+  "restart-level1-win-button"
+);
+const restartLevel1LoseButton = document.getElementById(
+  "restart-level1-lose-button"
+);
 
+/* VARIABLE TO ENABLE NEW GAME IN EVENTS */
 let game = null;
-let level2 = null;
 
 //StartScreen
 startButton.addEventListener("click", () => {
@@ -22,34 +29,40 @@ startButton.addEventListener("click", () => {
 level1Button.addEventListener("click", () => {
   startScreen.style.display = "none";
   levelsScreen.style.display = "none";
-  game = new Game(levelOneQuestions);
+  game = new Game(levelOneQuestions, 1, "50px VT323");
   game.start();
 });
 
 level2Button.addEventListener("click", () => {
   startScreen.style.display = "none";
   levelsScreen.style.display = "none";
-  game = new Game(levelTwoQuestions);
+  game = new Game(levelTwoQuestions, 2, "35px VT323");
   game.start();
 });
 
-//EndingScreens
-nextLevel2.addEventListener("click", () => {
-  game = new Game(levelTwoQuestions);
+/* EndingScreens */
+
+//NEXT LEVEL
+nextLevel2Button.addEventListener("click", () => {
+  winScreenLevel1.style.display = "none";
+  game = new Game(levelTwoQuestions, 2, "35px VT323");
   game.start();
 });
 
-restartWinButton.addEventListener("click", () => {
-  winScreen.style.display = "none";
-  game = new Game(levelOneQuestions);
+//LEVEL ONE
+restartLevel1WinButton.addEventListener("click", () => {
+  winScreenLevel1.style.display = "none";
+  game = new Game(levelOneQuestions, 1, "50px VT323");
   game.start();
 });
 
-restartLoseButton.addEventListener("click", () => {
-  loseScreen.style.display = "none";
-  game = new Game(levelOneQuestions);
+restartLevel1LoseButton.addEventListener("click", () => {
+  loseScreenLevel1.style.display = "none";
+  game = new Game(levelOneQuestions, 1, "50px VT323");
   game.start();
 });
+
+//LEVEL TWO
 
 //Controls for the keyboard
 

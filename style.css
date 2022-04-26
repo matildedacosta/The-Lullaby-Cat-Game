@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
+/* HTML AND CANVAS */
 body {
   background-color: #311b6b;
   color: white;
@@ -75,6 +76,7 @@ ul {
   display: none;
 }
 
+/* START SCREEN */
 #start-screen {
   width: 1485px;
   height: 700px;
@@ -94,54 +96,7 @@ img {
   height: 100px;
 }
 
-#win-screen {
-  width: 1485px;
-  height: 700px;
-  flex-direction: column;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background-image: url("/docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#restart-button,
-img {
-  background-color: transparent;
-  border: none;
-  width: 150px;
-  height: 100px;
-}
-
-#lose-screen {
-  width: 1485px;
-  height: 700px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("/docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#restart-lose-button,
-img {
-  background-color: transparent;
-  border: none;
-  width: 150px;
-  height: 100px;
-}
-
-#restart-win-button,
-img {
-  background-color: transparent;
-  border: none;
-  width: 150px;
-  height: 100px;
-}
-
+/* LEVELS SCREEN */
 #levels-screen {
   width: 1485px;
   height: 700px;
@@ -157,7 +112,6 @@ img {
 #level-buttons {
   margin: 20px;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
 }
 
@@ -175,9 +129,61 @@ img {
   height: 50px;
 }
 
+/* RESTART BUTTON AND BUTTON CLASSES*/
+
+#restart-button,
+img {
+  background-color: transparent;
+  border: none;
+  width: 150px;
+  height: 100px;
+}
+
 .buttons {
   width: 100px;
   height: 50px;
+}
+
+/* LEVEL 1 */
+
+#win-level1-screen {
+  width: 1485px;
+  height: 700px;
+  flex-direction: column;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#lose-level1-screen {
+  width: 1485px;
+  height: 700px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#restart-level1-lose-button,
+img {
+  background-color: transparent;
+  border: none;
+  width: 200px;
+  height: 100px;
+}
+
+#restart-level1-win-button,
+img {
+  background-color: transparent;
+  border: none;
+  width: 200px;
+  height: 100px;
 }
 
 #next-level2 {
@@ -187,8 +193,32 @@ img {
   height: 100px;
 }
 
-.level1-win-buttons {
+.level-win-buttons {
   display: flex;
-  /* flex: row; */
   align-items: center;
+}
+
+/* LEVEL 2 */
+#lose-level2-screen {
+  width: 1485px;
+  height: 700px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#win-level2-screen {
+  width: 1485px;
+  height: 700px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
