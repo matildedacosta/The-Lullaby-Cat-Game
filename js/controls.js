@@ -1,43 +1,30 @@
 const startButton = document.getElementById("start-button");
 const startScreen = document.getElementById("start-screen");
-const canvas = document.getElementById("canvas");
 const restartButton = document.getElementById("restart-button");
 const restartButton1 = document.getElementById("restart-button1");
 const winScreen = document.getElementById("win-screen");
-const gameOver = document.getElementById("lose-screen");
+const loseScreen = document.getElementById("lose-screen");
+
 let game = null;
 
-function startGame() {
+startButton.addEventListener("click", () => {
+  startScreen.style.display = "none";
   game = new Game();
   game.start();
-  computerKey();
-}
+})
 
-window.onload = () => {
-  startButton.onclick = () => {
-    winScreen.style.display = "none";
-    gameOver.style.display = "none";
-    startScreen.style.display = "none";
-    canvas.style.display = "flex";
-    startGame();
-  };
-};
+restartButton.addEventListener("click", () => {
+  winScreen.style.display = "none";
+  game = new Game();
+  game.start();
+})
 
-restartButton.onclick = () => {
-  startScreen.style.display = "none";
-  canvas.style.display = "flex";
-  canvas.clearRect(0, 0, this.width, this.height);
-  startGame();
-};
+restartButton1.addEventListener("click", () => {
+  loseScreen.style.display = "none";
+  game = new Game();
+  game.start();
+})
 
-restartButton1.onclick = () => {
-  gameOver.style.display = "none";
-  canvas.style.display = "flex";
-  canvas.clearRect(0, 0, this.width, this.height);
-  startGame();
-};
-
-function computerKey() {
   window.addEventListener("keydown", (e) => {
     console.log(game.questions[game.askedQuestions].answer);
 
@@ -47,9 +34,5 @@ function computerKey() {
       game.isCorrect();
     } else if (keyPressed !== game.questions[game.askedQuestions].answer) {
       game.isWrong();
-      console.log(game.isWrong());
     }
   });
-}
-
-//|| timeInFrame > this.timeIntervalID also check lowercase
