@@ -16,7 +16,7 @@
         <ul class="game-rules">
           <li>
             🐾 Press the key in the computer that represents the musical note
-            asked in the question.
+            asked in the question (check the piano image below).
           </li>
           <li>
             🐾 Every question <em>right</em>: the cat moves a step closer to the
@@ -36,7 +36,7 @@
           </li>
           <li>
             <img
-              src="./docs/assets/images/Piano.jpg"
+              src="./docs/assets/images/piano-pixel.jpg"
               alt="piano-keyboard"
               id="piano"
             />
@@ -47,30 +47,62 @@
           </li> -->
         </ul>
       </div>
-      <div id="start-screen">
+      <section id="start-screen">
         <button id="start-button">
           <img src="/docs/assets/images/start-button.png" alt="button" />
         </button>
-      </div>
+      </section>
 
-      <div id="win-screen">
+      <section id="levels-screen">
+        <h3>Choose your level:</h3>
+        <div id="level-buttons">
+          <h4>Press the Musical Notes</h4>
+          <button id="level1-button">
+            <img
+              class="buttons"
+              src="/docs/assets/images/level1.png"
+              alt="button"
+            />
+          </button>
+          <h4>Find the Perfect Fifth</h4>
+          <button id="level2-button">
+            <img
+              class="buttons"
+              src="/docs/assets/images/level2.png"
+              alt="button"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section id="win-screen">
         <h1>YOU WIN!</h1>
-        <button id="restart-button">
-          <img src="/docs/assets/images/restart.png" alt="button" />
-        </button>
-      </div>
+        <div class="level1-win-buttons">
+          <button id="restart-win-button">
+            <img src="/docs/assets/images/restart.png" alt="button" />
+          </button>
+          <button id="next-level2">
+            <img
+              class="buttons"
+              src="/docs/assets/images/level2.png"
+              alt="button"
+            />
+          </button>
+        </div>
+      </section>
 
-      <div id="lose-screen">
+      <section id="lose-screen">
         <h1>YOU LOSE!</h1>
-        <button id="restart-button1">
+        <button id="restart-lose-button">
           <img src="/docs/assets/images/restart.png" alt="button" />
         </button>
-      </div>
+      </section>
 
       <div class="game-canvas">
         <canvas id="canvas" width="950" height="700"></canvas>
       </div>
     </main>
+    <script src="/js/levels.js"></script>
     <script src="/js/controls.js"></script>
     <script src="/js/elements.js"></script>
     <script src="/js/game.js"></script>

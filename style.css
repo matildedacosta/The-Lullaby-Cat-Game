@@ -18,6 +18,24 @@ h2 {
   font-size: 40px;
 }
 
+h3 {
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+}
+
+h4 {
+  text-align: center;
+  font-size: 39px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+}
+
 main {
   display: flex;
   flex-direction: row;
@@ -43,10 +61,10 @@ ul {
 
 #piano {
   margin-top: 25px;
-  margin-left: 180px;
-  width: 400px;
+  margin-left: 250px;
+  width: 300px;
   height: auto;
-  border-radius: 5%;
+  border-radius: 1%;
   display: flex;
 }
 
@@ -58,7 +76,7 @@ ul {
 }
 
 #start-screen {
-  width: 1140px;
+  width: 1485px;
   height: 700px;
   display: flex;
   align-items: center;
@@ -77,7 +95,7 @@ img {
 }
 
 #win-screen {
-  width: 1140px;
+  width: 1485px;
   height: 700px;
   flex-direction: column;
   display: none;
@@ -97,7 +115,7 @@ img {
 }
 
 #lose-screen {
-  width: 1140px;
+  width: 1485px;
   height: 700px;
   display: none;
   flex-direction: column;
@@ -108,10 +126,69 @@ img {
   background-size: cover;
 }
 
-#restart-button1,
+#restart-lose-button,
 img {
   background-color: transparent;
   border: none;
   width: 150px;
   height: 100px;
+}
+
+#restart-win-button,
+img {
+  background-color: transparent;
+  border: none;
+  width: 150px;
+  height: 100px;
+}
+
+#levels-screen {
+  width: 1485px;
+  height: 700px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#level-buttons {
+  margin: 20px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+#level1-button {
+  background-color: transparent;
+  border: none;
+  width: 200px;
+  height: 100px;
+}
+
+#level2-button {
+  background-color: transparent;
+  border: none;
+  width: 100px;
+  height: 50px;
+}
+
+.buttons {
+  width: 100px;
+  height: 50px;
+}
+
+#next-level2 {
+  background-color: transparent;
+  border: none;
+  width: 200px;
+  height: 100px;
+}
+
+.level1-win-buttons {
+  display: flex;
+  /* flex: row; */
+  align-items: center;
 }

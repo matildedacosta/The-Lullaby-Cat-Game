@@ -3,7 +3,7 @@
 //Adicionar sons
 
 class Game {
-  constructor() {
+  constructor(initialQuestions) {
     this.canvas = document.getElementById("canvas");
     this.ctx = this.canvas.getContext("2d");
     this.x = 0;
@@ -13,7 +13,7 @@ class Game {
     this.cat = null;
     this.bed = null;
     this.sound = new Audio();
-    //this.sound.volume = 0.1;
+    this.initialQuestions = initialQuestions;
     this.questions = [];
     this.rightQuestions = 0;
     this.wrongQuestions = 0;
@@ -89,10 +89,10 @@ class Game {
     if (this.rightQuestions >= 9) {
       this.canvas.style.display = "none";
       winScreen.style.display = "flex";
-      this.clear();
       this.sound.src = "/docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
+      this.clear();
     }
   }
 
@@ -119,21 +119,6 @@ class Game {
   }
 
   questionsRandomizer() {
-    const initialQuestions = [
-      { question: "Press the musical note C", answer: "A" },
-      { question: "Press the musical note C#/Db", answer: "W" },
-      { question: "Press the musical note D", answer: "S" },
-      { question: "Press the musical note D#/Eb", answer: "E" },
-      { question: "Press the musical note E", answer: "D" },
-      { question: "Press the musical note F", answer: "F" },
-      { question: "Press the musical note F#/Gb", answer: "T" },
-      { question: "Press the musical note G", answer: "G" },
-      { question: "Press the musical note G#/Ab", answer: "Y" },
-      { question: "Press the musical note A", answer: "H" },
-      { question: "Press the musical note A#/Bb", answer: "U" },
-      { question: "Press the musical note B", answer: "J" },
-    ];
-
     function shuffle(array) {
       let currentIndex = array.length,
         randomIndex;
@@ -153,6 +138,6 @@ class Game {
 
       return array;
     }
-    this.questions = shuffle(initialQuestions);
+    this.questions = shuffle(this.initialQuestions);
   }
 }
