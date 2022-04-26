@@ -1,6 +1,6 @@
-//Resolver problema das perguntas (não está a fazer sentido- o gato não chega à cama sempre. porquê?)
-//Fazer com que apareça o gato na cama primeiro E depois fazer o swap de screens
-//Adicionar sons
+//Fix problem with level two ending screens (when I lose and try to restart)
+//Fix CSS & HTML (add caption to piano)
+//Add sections below to explain levels
 
 class Game {
   constructor(initialQuestions, level, font) {
@@ -85,12 +85,18 @@ class Game {
   }
 
   checkGameover() {
-    if (this.level === 1) {
+    if (this.level === 1 && this.wrongQuestions >= 3) {
       const loseScreenLevel1 = document.getElementById("lose-level1-screen");
-    }
-    if (this.wrongQuestions >= 3) {
       this.canvas.style.display = "none";
-      loseScreen.style.display = "flex";
+      loseScreenLevel1.style.display = "flex";
+      this.sound.src = "/docs/assets/sounds/cat-hiss.wav";
+      this.sound.loop = false;
+      this.sound.play();
+      this.clear();
+    } else if (this.level === 2 && this.wrongQuestions >= 3) {
+      const loseScreenlevel2 = document.getElementById("lose-level2-screen");
+      this.canvas.style.display = "none";
+      loseScreenlevel2.style.display = "flex";
       this.sound.src = "/docs/assets/sounds/cat-hiss.wav";
       this.sound.loop = false;
       this.sound.play();
@@ -99,15 +105,18 @@ class Game {
   }
 
   checkWin() {
-    if (this.level === 1) {
+    if (this.level === 1 && this.rightQuestions >= 9) {
       const winScreenLevel1 = document.getElementById("win-level1-screen");
-      /* else if (this.level === 2){
-      const winScreenlevel2 = document.getElementById("win-screen");
-    } */
-    }
-    if (this.rightQuestions >= 9) {
       this.canvas.style.display = "none";
       winScreenLevel1.style.display = "flex";
+      this.sound.src = "/docs/assets/sounds/cat-purr.wav";
+      this.sound.loop = false;
+      this.sound.play();
+      this.clear();
+    } else if (this.level === 2 && this.rightQuestions >= 9) {
+      const winScreenLevel2 = document.getElementById("win-level2-screen");
+      this.canvas.style.display = "none";
+      winScreenLevel2.style.display = "flex";
       this.sound.src = "/docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();

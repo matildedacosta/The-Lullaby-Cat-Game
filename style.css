@@ -2,6 +2,7 @@
 
 /* HTML AND CANVAS */
 body {
+  margin: 0;
   background-color: #311b6b;
   color: white;
   font-family: "VT323", monospace;
@@ -38,6 +39,7 @@ h4 {
 }
 
 main {
+  margin: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -52,6 +54,7 @@ ul {
 
 #center-li {
   text-align: center;
+  font-size: 20px;
 }
 
 .instructions {
@@ -60,9 +63,14 @@ ul {
   align-items: center;
 }
 
+#piano-li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #piano {
   margin-top: 25px;
-  margin-left: 250px;
   width: 300px;
   height: auto;
   border-radius: 1%;
@@ -76,9 +84,24 @@ ul {
   display: none;
 }
 
+#levels-info {
+  border-top: 1px solid rgba(255, 255, 255, 0.495);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffffff55;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+.articles {
+  width: 500px;
+}
+
 /* START SCREEN */
 #start-screen {
-  width: 1485px;
+  width: 950px;
   height: 700px;
   display: flex;
   align-items: center;
@@ -90,15 +113,13 @@ ul {
 
 #start-button,
 img {
-  background-color: transparent;
-  border: none;
   width: 200px;
   height: 100px;
 }
 
 /* LEVELS SCREEN */
 #levels-screen {
-  width: 1485px;
+  width: 950px;
   height: 700px;
   display: none;
   flex-direction: column;
@@ -115,39 +136,28 @@ img {
   align-items: center;
 }
 
-#level1-button {
-  background-color: transparent;
-  border: none;
-  width: 200px;
-  height: 100px;
-}
-
-#level2-button {
-  background-color: transparent;
-  border: none;
-  width: 100px;
-  height: 50px;
-}
-
-/* RESTART BUTTON AND BUTTON CLASSES*/
-
-#restart-button,
-img {
-  background-color: transparent;
-  border: none;
-  width: 150px;
-  height: 100px;
-}
+/* BUTTON CLASSES*/
 
 .buttons {
+  background-color: transparent;
+  border: none;
+}
+
+.buttons-img {
   width: 100px;
   height: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+.div-buttons {
+  display: flex;
+  align-items: center;
 }
 
 /* LEVEL 1 */
-
 #win-level1-screen {
-  width: 1485px;
+  width: 950px;
   height: 700px;
   flex-direction: column;
   display: none;
@@ -159,7 +169,7 @@ img {
 }
 
 #lose-level1-screen {
-  width: 1485px;
+  width: 950px;
   height: 700px;
   display: none;
   flex-direction: column;
@@ -170,37 +180,9 @@ img {
   background-size: cover;
 }
 
-#restart-level1-lose-button,
-img {
-  background-color: transparent;
-  border: none;
-  width: 200px;
-  height: 100px;
-}
-
-#restart-level1-win-button,
-img {
-  background-color: transparent;
-  border: none;
-  width: 200px;
-  height: 100px;
-}
-
-#next-level2 {
-  background-color: transparent;
-  border: none;
-  width: 200px;
-  height: 100px;
-}
-
-.level-win-buttons {
-  display: flex;
-  align-items: center;
-}
-
 /* LEVEL 2 */
 #lose-level2-screen {
-  width: 1485px;
+  width: 950px;
   height: 700px;
   display: none;
   flex-direction: column;
@@ -212,7 +194,7 @@ img {
 }
 
 #win-level2-screen {
-  width: 1485px;
+  width: 950px;
   height: 700px;
   display: none;
   flex-direction: column;

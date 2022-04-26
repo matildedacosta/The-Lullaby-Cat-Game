@@ -14,10 +14,7 @@
       <div class="instructions">
         <h2>RULES OF THE GAME</h2>
         <ul class="game-rules">
-          <li>
-            🐾 Press the key in the computer that represents the musical note
-            asked in the question (check the piano image below).
-          </li>
+          <li>🐾 Check the section below for level information.</li>
           <li>
             🐾 Every question <em>right</em>: the cat moves a step closer to the
             bed.
@@ -32,9 +29,15 @@
           </li>
           <li id="center-li">
             <br />
-            <em><b>NOTE: ANSWER EACH QUESTION IN LESS THAN 10 SECONDS.</b></em>
+            <em
+              ><b
+                >NOTE: </em
+                ><br />The letters in the piano below represent the keys
+                in the computer. <br />They are placed in the position of the
+                musical note in the piano.</b
+              >
           </li>
-          <li>
+          <li id="piano-li">
             <img
               src="./docs/assets/images/piano-pixel.jpg"
               alt="piano-keyboard"
@@ -46,7 +49,7 @@
         <!-- START SCREEN -->
       </div>
       <section id="start-screen">
-        <button id="start-button">
+        <button class="buttons" id="start-button">
           <img src="/docs/assets/images/start-button.png" alt="button" />
         </button>
       </section>
@@ -56,17 +59,17 @@
         <h3>Choose your level:</h3>
         <div id="level-buttons">
           <h4>Press the Musical Notes</h4>
-          <button id="level1-button">
+          <button class="buttons" id="level1-button">
             <img
-              class="buttons"
+              class="buttons-img"
               src="/docs/assets/images/level1.png"
               alt="button"
             />
           </button>
           <h4>Find the Perfect Fifth</h4>
-          <button id="level2-button">
+          <button class="buttons" id="level2-button">
             <img
-              class="buttons"
+              class="buttons-img"
               src="/docs/assets/images/level2.png"
               alt="button"
             />
@@ -77,13 +80,17 @@
       <!-- LEVEL ONE -->
       <section id="win-level1-screen">
         <h1>YOU WIN!</h1>
-        <div class="level1-win-buttons">
-          <button id="restart-level1-win-button">
-            <img src="/docs/assets/images/restart.png" alt="button" />
-          </button>
-          <button id="next-level2">
+        <div class="div-buttons">
+          <button class="buttons" id="restart-level1-win-button">
             <img
-              class="buttons"
+              class="buttons-img"
+              src="/docs/assets/images/restart.png"
+              alt="button"
+            />
+          </button>
+          <button class="buttons" id="next-level2">
+            <img
+              class="buttons-img"
               src="/docs/assets/images/level2.png"
               alt="button"
             />
@@ -93,8 +100,12 @@
 
       <section id="lose-level1-screen">
         <h1>YOU LOSE!</h1>
-        <button id="restart-level1-lose-button">
-          <img src="/docs/assets/images/restart.png" alt="button" />
+        <button class="buttons" id="restart-level1-lose-button">
+          <img
+            class="buttons-img"
+            src="/docs/assets/images/restart.png"
+            alt="button"
+          />
         </button>
       </section>
 
@@ -103,12 +114,31 @@
       <section id="win-level2-screen">
         <h1>YOU WIN!</h1>
         <div class="level-win-buttons">
-          <button id="restart-win-level2-button">
-            <img src="/docs/assets/images/restart.png" alt="button" />
-          </button>
-          <button id="back-level1">
+          <div class="div-buttons">
+            <button class="buttons" id="restart-win-level2-button">
+              <img
+                class="buttons-img"
+                src="/docs/assets/images/restart.png"
+                alt="button"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="lose-level2-screen">
+        <h1>YOU LOSE!</h1>
+        <div class="div-buttons">
+          <button class="buttons" id="restart-lose-level2-button">
             <img
-              class="buttons"
+              class="buttons-img"
+              src="/docs/assets/images/restart.png"
+              alt="button"
+            />
+          </button>
+          <button class="buttons" id="back-to-level1-button">
+            <img
+              class="buttons-img"
               src="/docs/assets/images/level1.png"
               alt="button"
             />
@@ -116,25 +146,34 @@
         </div>
       </section>
 
-      <section id="lose-level2-screen">
-        <h1>YOU LOSE!</h1>
-        <button id="restart-lose-level2-button">
-          <img src="/docs/assets/images/restart.png" alt="button" />
-        </button>
-        <button id="back-to-level1-button">
-          <img
-            class="buttons"
-            src="/docs/assets/images/level1.png"
-            alt="button"
-          />
-        </button>
-      </section>
-
       <!-- CANVAS -->
       <div class="game-canvas">
         <canvas id="canvas" width="950" height="700"></canvas>
       </div>
     </main>
+
+    <section id="levels-info">
+      <article class="articles">
+        <h3>LEVEL ONE</h3>
+        <ul>
+          <li>
+            🐾 Press the key in the computer that represents the <em>musical note</em>
+            asked in the question (check the piano image above).
+          </li>
+          <li>🐾 Answer the questions in less than <em>10 seconds.</em></li>
+        </ul>
+      </article>
+      <article class="articles">
+        <h3>LEVEL TWO</h3>
+        <ul>
+          <li>
+            🐾 Press the key in the computer that represents the <em>perfect pitch</em> of the musical note
+            asked in the question (check the piano image above).
+          </li>
+          <li>🐾 Answer the questions in less than <em>20 seconds.</em></li>
+        </ul>
+      </article>
+    </section>
 
     <!-- JAVASCRIPT LINKS -->
     <script src="/js/questions.js"></script>
