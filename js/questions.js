@@ -1,3 +1,4 @@
+/* LEVEL 1 */
 //Questions
 const levelOneQuestions = [
   { question: "Press the musical note C", answer: "A" },
@@ -13,6 +14,10 @@ const levelOneQuestions = [
   { question: "Press the musical note A#/Bb", answer: "U" },
   { question: "Press the musical note B", answer: "J" },
 ];
+
+//sounds
+
+/* LEVEL TWO */
 
 const levelTwoQuestions = [
   {
@@ -63,4 +68,52 @@ const levelTwoQuestions = [
     question: "Press the perfect fifth of the musical note B",
     answer: "T",
   },
+];
+
+/* LEVEL THREE */
+const levelThreeQuestions = [
+  {
+    question: "C Major",
+    answer: ["KeyA", "KeyD", "KeyG"],
+  },
+  {
+    question: "D minor",
+    answer: ["KeyS", "KeyF", "KeyH"],
+  },
+  {
+    question: "E minor",
+    answer: ["KeyD", "KeyG", "KeyJ"],
+  },
+  {
+    question: "F Major",
+    answer: ["KeyF", "KeyH", "KeyA"],
+  },
+  {
+    question: "G Major",
+    answer: ["KeyG", "KeyJ", "KeyS"],
+  },
+  {
+    question: "A minor",
+    answer: ["KeyH", "KeyA", "KeyD"],
+  },
+  {
+    question: "B diminished",
+    answer: ["KeyJ", "KeyS", "KeyF"],
+  },
+];
+
+/* LEVEL FOUR */
+const levelFourQuestions = [
+  { question: "What note is this?", answer: "A" },
+  { question: "What note is this?", answer: "W" },
+  { question: "What note is this?", answer: "S" },
+  { question: "What note is this?", answer: "E" },
+  { question: "What note is this?", answer: "D" },
+  { question: "What note is this?", answer: "F" },
+  { question: "What note is this?", answer: "T" },
+  { question: "What note is this?", answer: "G" },
+  { question: "What note is this?", answer: "Y" },
+  { question: "What note is this?", answer: "H" },
+  { question: "What note is this?", answer: "U" },
+  { question: "What note is this?", answer: "J" },
 ];

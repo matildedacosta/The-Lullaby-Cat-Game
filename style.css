@@ -3,7 +3,10 @@
 /* HTML AND CANVAS */
 body {
   margin: 0;
-  background-color: #311b6b;
+  background-image: url("/docs/assets/images/starry-sky.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: #311b6b; */
   color: white;
   font-family: "VT323", monospace;
   display: flex;
@@ -24,18 +27,35 @@ h3 {
   text-align: center;
   font-size: 60px;
   text-transform: uppercase;
-  -webkit-text-stroke-width: 0.1px;
-  -webkit-text-stroke-color: black;
 }
 
 h4 {
   text-align: center;
-  font-size: 39px;
+  font-size: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  -webkit-text-stroke-width: 0.1px;
-  -webkit-text-stroke-color: black;
+}
+
+h5 {
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #dfcccc;
+  font-style: italic;
+}
+
+header {
+  background-color: #ffffff29;
+  background-image: url("/docs/assets/images/starry-sky.gif");
+}
+
+#title {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  opacity: 1;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #dfcccc;
 }
 
 main {
@@ -53,6 +73,7 @@ ul {
 }
 
 #center-li {
+  line-height: 1;
   text-align: center;
   font-size: 20px;
 }
@@ -71,7 +92,8 @@ ul {
 
 #piano {
   margin-top: 25px;
-  width: 300px;
+  margin-bottom: 25px;
+  width: 350px;
   height: auto;
   border-radius: 1%;
   display: flex;
@@ -86,13 +108,14 @@ ul {
 
 #levels-info {
   border-top: 1px solid rgba(255, 255, 255, 0.495);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.495);
+  background-color: #ffffff42;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #ffffff55;
   -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: #dfcccc;
 }
 
 .articles {
@@ -118,6 +141,13 @@ img {
 }
 
 /* LEVELS SCREEN */
+.each-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #levels-screen {
   width: 950px;
   height: 700px;
@@ -194,6 +224,56 @@ img {
 }
 
 #win-level2-screen {
+  width: 950px;
+  height: 700px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* LEVEL 3 */
+#lose-level3-screen {
+  width: 950px;
+  height: 700px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#win-level3-screen {
+  width: 950px;
+  height: 700px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* LEVEL 4 */
+#lose-level4-screen {
+  width: 950px;
+  height: 700px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#win-level4-screen {
   width: 950px;
   height: 700px;
   display: none;

@@ -8,13 +8,14 @@
     <title>The Sleeping Cat</title>
   </head>
   <body>
-    <header><h1>The Sleeping Cat Game</h1></header>
+    <header><h1 id="title">The Sleeping Cat Game</h1></header>
 
     <main>
       <div class="instructions">
         <h2>RULES OF THE GAME</h2>
         <ul class="game-rules">
           <li>🐾 Check the section below for level information.</li>
+          <li>🐾 Use the letters in the piano below to answer.</li>
           <li>
             🐾 Every question <em>right</em>: the cat moves a step closer to the
             bed.
@@ -23,20 +24,12 @@
             🐾 Every question <em>wrong</em> the cat moves a step backward.
           </li>
           <li>🐾 Three questions wrong: <em>GAME OVER</em>.</li>
-          <li>
+          <!--  <li>
             🐾 If you answer 9 questions correctly: the cat goes to sleep and
             <em>YOU WIN</em>.
-          </li>
-          <li id="center-li">
-            <br />
-            <em
-              ><b
-                >NOTE: </em
-                ><br />The letters in the piano below represent the keys
-                in the computer. <br />They are placed in the position of the
-                musical note in the piano.</b
-              >
-          </li>
+          </li> -->
+
+          <hr />
           <li id="piano-li">
             <img
               src="./docs/assets/images/piano-pixel.jpg"
@@ -44,6 +37,13 @@
               id="piano"
             />
           </li>
+          <li id="center-li">
+            <em>
+            The letters in the piano represent the
+                 computer keyboard. <br />Their location is related to the position of
+                 the musical notes in the piano.</b
+               ></em>
+           </li>
         </ul>
 
         <!-- START SCREEN -->
@@ -58,22 +58,46 @@
       <section id="levels-screen">
         <h3>Choose your level:</h3>
         <div id="level-buttons">
-          <h4>Press the Musical Notes</h4>
-          <button class="buttons" id="level1-button">
-            <img
-              class="buttons-img"
-              src="/docs/assets/images/level1.png"
-              alt="button"
-            />
-          </button>
-          <h4>Find the Perfect Fifth</h4>
-          <button class="buttons" id="level2-button">
-            <img
-              class="buttons-img"
-              src="/docs/assets/images/level2.png"
-              alt="button"
-            />
-          </button>
+          <div class="each-level">
+            <!-- <h4>Press the Musical Notes</h4> -->
+            <button class="buttons" id="level1-button">
+              <img
+                class="buttons-img"
+                src="/docs/assets/images/level1.png"
+                alt="button"
+              />
+            </button>
+          </div>
+          <div class="each-level">
+            <!-- <h4>Find the Perfect Fifth</h4> -->
+            <button class="buttons" id="level2-button">
+              <img
+                class="buttons-img"
+                src="/docs/assets/images/level2.png"
+                alt="button"
+              />
+            </button>
+          </div>
+          <div class="each-level">
+            <!-- <h4>Construct the C Major Scale chords</h4> -->
+            <button class="buttons" id="level3-button">
+              <img
+                class="buttons-img"
+                src="/docs/assets/images/level3.png"
+                alt="button"
+              />
+            </button>
+          </div>
+          <div class="each-level">
+            <!-- <h4>Construct the C Major Scale chords</h4> -->
+            <button class="buttons" id="level4-button">
+              <img
+                class="buttons-img"
+                src="/docs/assets/images/level4.png"
+                alt="button"
+              />
+            </button>
+          </div>
         </div>
       </section>
 
@@ -122,6 +146,13 @@
                 alt="button"
               />
             </button>
+            <button class="buttons" id="next-level3">
+              <img
+                class="buttons-img"
+                src="/docs/assets/images/level3.png"
+                alt="button"
+              />
+            </button>
           </div>
         </div>
       </section>
@@ -146,34 +177,144 @@
         </div>
       </section>
 
+      <!-- LEVEL THREE -->
+      <section id="win-level3-screen">
+        <h1>YOU WIN!</h1>
+        <div class="level-win-buttons">
+          <div class="div-buttons">
+            <button class="buttons" id="restart-win-level3-button">
+              <img
+                class="buttons-img"
+                src="/docs/assets/images/restart.png"
+                alt="button"
+              />
+            </button>
+            <button class="buttons" id="next-level4">
+              <img
+                class="buttons-img"
+                src="/docs/assets/images/level4.png"
+                alt="button"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="lose-level3-screen">
+        <h1>YOU LOSE!</h1>
+        <div class="div-buttons">
+          <button class="buttons" id="restart-lose-level3-button">
+            <img
+              class="buttons-img"
+              src="/docs/assets/images/restart.png"
+              alt="button"
+            />
+          </button>
+          <button class="buttons" id="back-to-level2-button">
+            <img
+              class="buttons-img"
+              src="/docs/assets/images/level2.png"
+              alt="button"
+            />
+          </button>
+        </div>
+      </section>
+
+      <!-- LEVEL FOUR -->
+      <section id="win-level4-screen">
+        <h1>YOU WIN!</h1>
+        <div class="level-win-buttons">
+          <div class="div-buttons">
+            <button class="buttons" id="restart-win-level4-button">
+              <img
+                class="buttons-img"
+                src="/docs/assets/images/restart.png"
+                alt="button"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="lose-level4-screen">
+        <h1>YOU LOSE!</h1>
+        <div class="div-buttons">
+          <button class="buttons" id="restart-lose-level4-button">
+            <img
+              class="buttons-img"
+              src="/docs/assets/images/restart.png"
+              alt="button"
+            />
+          </button>
+          <button class="buttons" id="back-to-level3-button">
+            <img
+              class="buttons-img"
+              src="/docs/assets/images/level3.png"
+              alt="button"
+            />
+          </button>
+        </div>
+      </section>
+
       <!-- CANVAS -->
       <div class="game-canvas">
         <canvas id="canvas" width="950" height="700"></canvas>
       </div>
     </main>
 
+    <!-- LEVELS INFO -->
     <section id="levels-info">
       <article class="articles">
         <h3>LEVEL ONE</h3>
         <ul>
           <li>
-            🐾 Press the key in the computer that represents the <em>musical note</em>
+            🐾 Press the key in the computer that represents the
+            <em>musical note</em>
             asked in the question (check the piano image above).
           </li>
-          <li>🐾 Answer the questions in less than <em>10 seconds.</em></li>
+          <li>🐾 Answer in less than <em>10 seconds.</em></li>
         </ul>
       </article>
       <article class="articles">
         <h3>LEVEL TWO</h3>
         <ul>
           <li>
-            🐾 Press the key in the computer that represents the <em>perfect pitch</em> of the musical note
-            asked in the question (check the piano image above).
+            🐾 Press the key in the computer that represents the
+            <em>perfect pitch</em> of the musical note asked in the question
+            (check the piano image above).
           </li>
-          <li>🐾 Answer the questions in less than <em>20 seconds.</em></li>
+          <li>🐾 Answer in less than <em>20 seconds.</em></li>
+        </ul>
+      </article>
+      <article class="articles">
+        <h3>LEVEL THREE</h3>
+        <ul>
+          <li>
+            🐾 Press the keys in the computer that represent the
+            <em>notes</em> in the chords asked in the question (check the piano
+            image above).
+          </li>
+          <li>🐾 Answer in less than <em>30 seconds.</em></li>
+        </ul>
+      </article>
+      <article class="articles">
+        <h3>LEVEL FOUR</h3>
+        <ul>
+          <li>
+            🐾 Press the key in the computer that represents the
+            <em>note</em> played (check the piano image above).
+          </li>
+          <li>
+            🐾 Make sure you have a piano near you to confirm the note played.
+          </li>
+          <li>🐾 Answer in less than <em>60 seconds.</em></li>
         </ul>
       </article>
     </section>
+
+    <footer id="footer">
+      <h5>Game by Matilde Costa</h5>
+    </footer>
 
     <!-- JAVASCRIPT LINKS -->
     <script src="/js/questions.js"></script>

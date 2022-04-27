@@ -1,7 +1,13 @@
-//Fix problem with level two ending screens (when I lose and try to restart)
+//Put sounds in questions
+//Put ambient sound in the whole game
+//Put captions in the levels section
+//Change 'you win' and 'you lose' to more exciting images
+//put sound with the game over and win game
+//CheckWin()
+//CheckLose()
 
 class Game {
-  constructor(initialQuestions, level, font) {
+  constructor(initialQuestions, level, font, numberOfQuestions) {
     this.canvas = document.getElementById("canvas");
     this.ctx = this.canvas.getContext("2d");
     this.x = 0;
@@ -18,8 +24,10 @@ class Game {
     this.askedQuestions = 0;
     this.intervalId = null;
     this.questionTime = 0;
+    this.numberOfQuestions = numberOfQuestions;
     this.level = level;
     this.font = font;
+    this.keysDown = [];
   }
 
   update() {
@@ -56,6 +64,14 @@ class Game {
       if (this.questionTime > 1200) {
         this.isWrong();
       }
+    } else if (this.level === 3) {
+      if (this.questionTime > 1800) {
+        this.isWrong();
+      }
+    } else if (this.level === 4) {
+      if (this.questionTime > 2400) {
+        this.isWrong();
+      }
     }
   }
 
@@ -68,6 +84,7 @@ class Game {
     this.sound.src = "/docs/assets/sounds/cat-meow.wav";
     this.sound.loop = false;
     this.sound.play();
+    this.keysDown = [];
   }
 
   isWrong() {
@@ -80,6 +97,7 @@ class Game {
     this.sound.play();
     this.wrongQuestions += 1;
     this.questionTime = 0;
+    this.keysDown = [];
   }
 
   checkGameover() {
@@ -95,6 +113,22 @@ class Game {
       const loseScreenlevel2 = document.getElementById("lose-level2-screen");
       this.canvas.style.display = "none";
       loseScreenlevel2.style.display = "flex";
+      this.sound.src = "/docs/assets/sounds/cat-hiss.wav";
+      this.sound.loop = false;
+      this.sound.play();
+      this.clear();
+    } else if (this.level === 3 && this.wrongQuestions >= 3) {
+      const loseScreenlevel3 = document.getElementById("lose-level3-screen");
+      this.canvas.style.display = "none";
+      loseScreenlevel3.style.display = "flex";
+      this.sound.src = "/docs/assets/sounds/cat-hiss.wav";
+      this.sound.loop = false;
+      this.sound.play();
+      this.clear();
+    } else if (this.level === 4 && this.wrongQuestions >= 3) {
+      const loseScreenlevel4 = document.getElementById("lose-level4-screen");
+      this.canvas.style.display = "none";
+      loseScreenlevel4.style.display = "flex";
       this.sound.src = "/docs/assets/sounds/cat-hiss.wav";
       this.sound.loop = false;
       this.sound.play();
@@ -119,6 +153,22 @@ class Game {
       this.sound.loop = false;
       this.sound.play();
       this.clear();
+    } else if (this.level === 3 && this.rightQuestions >= 5) {
+      const winScreenLevel3 = document.getElementById("win-level3-screen");
+      this.canvas.style.display = "none";
+      winScreenLevel3.style.display = "flex";
+      this.sound.src = "/docs/assets/sounds/cat-purr.wav";
+      this.sound.loop = false;
+      this.sound.play();
+      this.clear();
+    } else if (this.level === 4 && this.rightQuestions >= 9) {
+      const winScreenLevel4 = document.getElementById("win-level4-screen");
+      this.canvas.style.display = "none";
+      winScreenLevel4.style.display = "flex";
+      this.sound.src = "/docs/assets/sounds/cat-purr.wav";
+      this.sound.loop = false;
+      this.sound.play();
+      this.clear();
     }
   }
 
@@ -129,19 +179,24 @@ class Game {
   drawQuestions(question) {
     this.ctx.font = this.font;
     this.ctx.fillStyle = "white";
-    this.ctx.fillText(question.question, 235, 350);
+    this.ctx.textAlign = "center";
+    this.ctx.fillText(question.question, 450, 350);
   }
 
   drawScore() {
     this.ctx.font = "40px VT323";
     this.ctx.fillStyle = "white";
-    this.ctx.fillText(`${this.rightQuestions} / 12`, 830, 40);
+    this.ctx.fillText(
+      `${this.rightQuestions} / ${this.numberOfQuestions}`,
+      875,
+      40
+    );
   }
 
   drawTimer(timer) {
     this.ctx.font = "40px VT323";
     this.ctx.fillStyle = "white";
-    this.ctx.fillText(`Timer: ${timer}`, 30, 40);
+    this.ctx.fillText(`Timer: ${timer}`, 80, 40);
   }
 
   questionsRandomizer() {
