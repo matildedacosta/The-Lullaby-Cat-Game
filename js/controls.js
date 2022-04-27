@@ -73,7 +73,7 @@ startButton.addEventListener("click", () => {
 level1Button.addEventListener("click", () => {
   startScreen.style.display = "none";
   levelsScreen.style.display = "none";
-  game = new Game(levelOneQuestions, 1, "50px VT323", 12);
+  game = new Game(levelOneQuestions, 1, "50px VT323", 19);
   game.start();
 });
 
@@ -103,13 +103,13 @@ level4Button.addEventListener("click", () => {
 //LEVEL 1 BUTTONS
 restartLevel1WinButton.addEventListener("click", () => {
   winScreenLevel1.style.display = "none";
-  game = new Game(levelOneQuestions, 1, "50px VT323", 12);
+  game = new Game(levelOneQuestions, 1, "50px VT323", 19);
   game.start();
 });
 
 restartLevel1LoseButton.addEventListener("click", () => {
   loseScreenLevel1.style.display = "none";
-  game = new Game(levelOneQuestions, 1, "50px VT323", 12);
+  game = new Game(levelOneQuestions, 1, "50px VT323", 19);
   game.start();
 });
 nextLevel2Button.addEventListener("click", () => {
@@ -133,7 +133,7 @@ restartLevel2LoseButton.addEventListener("click", () => {
 
 backToLevel1Button.addEventListener("click", () => {
   loseScreenLevel2.style.display = "none";
-  game = new Game(levelOneQuestions, 1, "50px VT323", 12);
+  game = new Game(levelOneQuestions, 1, "50px VT323", 19);
   game.start();
 });
 nextLevel3Button.addEventListener("click", () => {
@@ -206,10 +206,6 @@ window.addEventListener("keydown", (e) => {
   if (!possibleKeys.includes(keyPressed)) return;
   if (game.level === 3) {
     game.keysDown.push(e.code);
-    console.log(game.keysDown);
-    console.log(
-      game.keysDown.includes(game.questions[game.askedQuestions].answer[0])
-    );
 
     if (game.keysDown.length === 3) {
       if (

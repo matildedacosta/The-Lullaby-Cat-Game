@@ -17,6 +17,7 @@ class Game {
     this.cat = null;
     this.bed = null;
     this.sound = new Audio();
+    this.bgSound = new Audio("docs/assets/sounds/ambient-sound.wav");
     this.initialQuestions = initialQuestions;
     this.questions = [];
     this.rightQuestions = 0;
@@ -44,6 +45,8 @@ class Game {
   }
 
   start() {
+    this.bgSound.play();
+    this.bgSound.loop = true;
     this.canvas.style.display = "flex";
     this.ctx.clearRect(0, 0, this.width, this.height);
     this.questionsRandomizer();
@@ -81,7 +84,7 @@ class Game {
     this.sound;
     this.rightQuestions += 1;
     this.questionTime = 0;
-    this.sound.src = "/docs/assets/sounds/cat-meow.wav";
+    this.sound.src = "docs/assets/sounds/cat-meow.wav";
     this.sound.loop = false;
     this.sound.play();
     this.keysDown = [];
@@ -92,7 +95,7 @@ class Game {
     if (this.cat.x + this.cat.width < this.width) {
       this.cat.x += 75;
     }
-    this.sound.src = "/docs/assets/sounds/cat-hiss.wav";
+    this.sound.src = "docs/assets/sounds/cat-hiss.wav";
     this.sound.loop = false;
     this.sound.play();
     this.wrongQuestions += 1;
@@ -105,7 +108,7 @@ class Game {
       const loseScreenLevel1 = document.getElementById("lose-level1-screen");
       this.canvas.style.display = "none";
       loseScreenLevel1.style.display = "flex";
-      this.sound.src = "/docs/assets/sounds/cat-hiss.wav";
+      this.sound.src = "docs/assets/sounds/cat-hiss.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
@@ -113,7 +116,7 @@ class Game {
       const loseScreenlevel2 = document.getElementById("lose-level2-screen");
       this.canvas.style.display = "none";
       loseScreenlevel2.style.display = "flex";
-      this.sound.src = "/docs/assets/sounds/cat-hiss.wav";
+      this.sound.src = "docs/assets/sounds/cat-hiss.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
@@ -121,7 +124,7 @@ class Game {
       const loseScreenlevel3 = document.getElementById("lose-level3-screen");
       this.canvas.style.display = "none";
       loseScreenlevel3.style.display = "flex";
-      this.sound.src = "/docs/assets/sounds/cat-hiss.wav";
+      this.sound.src = "docs/assets/sounds/cat-hiss.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
@@ -129,7 +132,7 @@ class Game {
       const loseScreenlevel4 = document.getElementById("lose-level4-screen");
       this.canvas.style.display = "none";
       loseScreenlevel4.style.display = "flex";
-      this.sound.src = "/docs/assets/sounds/cat-hiss.wav";
+      this.sound.src = "docs/assets/sounds/cat-hiss.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
@@ -137,11 +140,11 @@ class Game {
   }
 
   checkWin() {
-    if (this.level === 1 && this.rightQuestions >= 9) {
+    if (this.level === 1 && this.rightQuestions >= 15) {
       const winScreenLevel1 = document.getElementById("win-level1-screen");
       this.canvas.style.display = "none";
       winScreenLevel1.style.display = "flex";
-      this.sound.src = "/docs/assets/sounds/cat-purr.wav";
+      this.sound.src = "docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
@@ -149,7 +152,7 @@ class Game {
       const winScreenLevel2 = document.getElementById("win-level2-screen");
       this.canvas.style.display = "none";
       winScreenLevel2.style.display = "flex";
-      this.sound.src = "/docs/assets/sounds/cat-purr.wav";
+      this.sound.src = "docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
@@ -157,7 +160,7 @@ class Game {
       const winScreenLevel3 = document.getElementById("win-level3-screen");
       this.canvas.style.display = "none";
       winScreenLevel3.style.display = "flex";
-      this.sound.src = "/docs/assets/sounds/cat-purr.wav";
+      this.sound.src = "docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
@@ -165,7 +168,7 @@ class Game {
       const winScreenLevel4 = document.getElementById("win-level4-screen");
       this.canvas.style.display = "none";
       winScreenLevel4.style.display = "flex";
-      this.sound.src = "/docs/assets/sounds/cat-purr.wav";
+      this.sound.src = "docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
