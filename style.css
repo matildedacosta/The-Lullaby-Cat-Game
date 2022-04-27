@@ -120,6 +120,18 @@ ul {
 
 .articles {
   width: 500px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.articles h3 {
+  margin: 10px;
+}
+
+.articles ul {
+  height: 300px;
 }
 
 /* START SCREEN */
