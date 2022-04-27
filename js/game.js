@@ -1,6 +1,4 @@
 //Fix problem with level two ending screens (when I lose and try to restart)
-//Fix CSS & HTML (add caption to piano)
-//Add sections below to explain levels
 
 class Game {
   constructor(initialQuestions, level, font) {

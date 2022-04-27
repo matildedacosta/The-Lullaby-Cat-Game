@@ -84,7 +84,7 @@ restartLevelTwoWinButton.addEventListener("click", () => {
 });
 
 restartLevelTwoLoseButton.addEventListener("click", () => {
-  winScreenLevel2.style.display = "none";
+  loseScreenLevel2.style.display = "none";
   game = new Game(levelTwoQuestions, 2, "30px VT323");
   game.start();
 });
