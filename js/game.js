@@ -1,4 +1,4 @@
-//CANVAS SIZE VS SCREEN SIZES
+//DRY CSS!!
 //Change 'you win' and 'you lose' to more exciting images?
 
 class Game {
@@ -110,7 +110,12 @@ class Game {
   checkGameover() {
     let loseScreen = document.getElementById(`lose-level${this.level}-screen`);
 
-    if (this.wrongQuestions >= 3) {
+    if (
+      (this.level === 1 && this.wrongQuestions >= 5) ||
+      (this.level === 2 && this.wrongQuestions >= 5) ||
+      (this.level === 3 && this.wrongQuestions >= 2) ||
+      (this.level === 4 && this.wrongQuestions >= 10)
+    ) {
       this.canvas.style.display = "none";
       loseScreen.style.display = "flex";
       this.sound.src = "./docs/assets/sounds/cat-hiss.wav";
@@ -124,10 +129,10 @@ class Game {
     let winScreen = document.getElementById(`win-level${this.level}-screen`);
 
     if (
-      (this.level === 1 && this.rightQuestions >= 18) ||
-      (this.level === 2 && this.rightQuestions >= 16) ||
+      (this.level === 1 && this.rightQuestions >= 16) ||
+      (this.level === 2 && this.rightQuestions >= 13) ||
       (this.level === 3 && this.rightQuestions >= 5) ||
-      (this.level === 4 && this.rightQuestions >= 9)
+      (this.level === 4 && this.rightQuestions >= 14)
     ) {
       this.canvas.style.display = "none";
       winScreen.style.display = "flex";

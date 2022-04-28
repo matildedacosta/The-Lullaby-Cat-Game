@@ -52,7 +52,6 @@ h6 {
   text-transform: uppercase;
   -webkit-text-stroke-width: 0.03px;
   -webkit-text-stroke-color: #dfcccc;
-  /*   color: #dfcccc; */
   font-style: italic;
 }
 
@@ -101,30 +100,26 @@ ul {
   list-style-type: none;
   font-size: 25px;
   line-height: 1.5;
-  margin-right: 30px;
-}
-
-#center-li {
-  display: flex;
-  line-height: 1;
-  font-size: 18px;
-  text-align: center;
-  margin-left: 40px;
 }
 
 .instructions {
+  width: max(46vw, 400px);
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(255, 255, 255, 0.495);
   background-color: #ffffff76;
-  height: 698px;
+  min-height: 698px;
+  padding: 10px;
 }
 
 .piano-info {
+  list-style-type: none;
   border: 1px solid rgba(255, 255, 255, 0.495);
   background-color: #ffffff95;
-  height: 360px;
   color: #000000;
+  text-align: center;
+  padding: 20px 5px;
+  margin: 0 5%;
 }
 
 #piano-li {
@@ -133,12 +128,15 @@ ul {
 }
 
 #piano {
-  margin-top: 25px;
-  margin-bottom: 25px;
   width: 350px;
   height: auto;
   border-radius: 1%;
   display: flex;
+  margin-bottom: 10px;
+}
+
+hr {
+  margin: 20px 5% 50px;
 }
 
 #levels-info {
