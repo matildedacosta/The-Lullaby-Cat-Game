@@ -1,8 +1,7 @@
 //Sound of questions, where do I call it?
 //CANVAS SIZE VS SCREEN SIZES
-//LEVELS SECTION
 //CheckWin() --> check length?
-//Change 'you win' and 'you lose' to more exciting images
+//Change 'you win' and 'you lose' to more exciting images?
 
 class Game {
   constructor(initialQuestions, level, font, numberOfQuestions) {
@@ -15,7 +14,7 @@ class Game {
     this.cat = null;
     this.bed = null;
     this.sound = new Audio();
-    this.bgSound = new Audio("docs/assets/sounds/ambient-sound.wav");
+    this.bgSound = new Audio("./docs/assets/sounds/ambient-sound.wav");
     this.initialQuestions = initialQuestions;
     this.questions = [];
     this.rightQuestions = 0;
@@ -89,7 +88,7 @@ class Game {
     this.askedQuestions++;
     this.rightQuestions += 1;
     this.questionTime = 0;
-    this.sound.src = "docs/assets/sounds/cat-meow.wav";
+    this.sound.src = "./docs/assets/sounds/cat-meow.wav";
     this.sound.loop = false;
     this.sound.play();
     this.keysDown = [];
@@ -100,7 +99,7 @@ class Game {
       this.cat.x += 75;
     }
     this.askedQuestions++;
-    this.sound.src = "docs/assets/sounds/cat-hiss.wav";
+    this.sound.src = "./docs/assets/sounds/cat-hiss.wav";
     this.sound.loop = false;
     this.sound.play();
     this.wrongQuestions += 1;
@@ -114,7 +113,7 @@ class Game {
     if (this.wrongQuestions >= 3) {
       this.canvas.style.display = "none";
       loseScreen.style.display = "flex";
-      this.sound.src = "docs/assets/sounds/cat-hiss.wav";
+      this.sound.src = "./docs/assets/sounds/cat-hiss.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
@@ -126,28 +125,28 @@ class Game {
     if (this.level === 1 && this.rightQuestions >= 18) {
       this.canvas.style.display = "none";
       winScreen.style.display = "flex";
-      this.sound.src = "docs/assets/sounds/cat-purr.wav";
+      this.sound.src = "./docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
     } else if (this.level === 2 && this.rightQuestions >= 16) {
       this.canvas.style.display = "none";
       winScreen.style.display = "flex";
-      this.sound.src = "docs/assets/sounds/cat-purr.wav";
+      this.sound.src = "./docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
     } else if (this.level === 3 && this.rightQuestions >= 5) {
       this.canvas.style.display = "none";
       winScreen.style.display = "flex";
-      this.sound.src = "docs/assets/sounds/cat-purr.wav";
+      this.sound.src = "./docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
     } else if (this.level === 4 && this.rightQuestions >= 9) {
       this.canvas.style.display = "none";
       winScreen.style.display = "flex";
-      this.sound.src = "docs/assets/sounds/cat-purr.wav";
+      this.sound.src = "./docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
