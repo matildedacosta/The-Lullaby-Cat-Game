@@ -11,7 +11,10 @@ class Game {
     this.height = 700;
     this.cat = null;
     this.bed = null;
-    this.sound = new Audio();
+    this.correctSound = new Audio();
+    this.wrongSound = new Audio();
+    this.winSound = new Audio();
+    this.loseSound = new Audio();
     this.bgSound = new Audio("./docs/assets/sounds/ambient-sound.wav");
     this.initialQuestions = initialQuestions;
     this.questions = [];
@@ -84,9 +87,9 @@ class Game {
     this.askedQuestions++;
     this.rightQuestions += 1;
     this.questionTime = 0;
-    this.sound.src = "./docs/assets/sounds/cat-meow.wav";
-    this.sound.loop = false;
-    this.sound.play();
+    this.correctSound.src = "./docs/assets/sounds/cat-meow.wav";
+    this.correctSound.loop = false;
+    this.correctSound.play();
     this.sound.volume = 0.2;
     this.keysDown = [];
   }
@@ -96,10 +99,10 @@ class Game {
       this.cat.x += 75;
     }
     this.askedQuestions++;
-    this.sound.src = "./docs/assets/sounds/cat-hiss.wav";
-    this.sound.loop = false;
-    this.sound.play();
-    this.sound.volume = 0.2;
+    this.wrongSound.src = "./docs/assets/sounds/cat-hiss.wav";
+    this.wrongSound.loop = false;
+    this.wrongSound.play();
+    this.wrongSound.volume = 0.2;
     this.wrongQuestions += 1;
     this.questionTime = 0;
     this.keysDown = [];
@@ -116,9 +119,9 @@ class Game {
     ) {
       this.canvas.style.display = "none";
       loseScreen.style.display = "flex";
-      this.sound.src = "./docs/assets/sounds/cat-hiss.wav";
-      this.sound.loop = false;
-      this.sound.play();
+      this.loseSound.src = "./docs/assets/sounds/cat-hiss.wav";
+      this.loseSound.loop = false;
+      this.loseSound.play();
       this.clear();
     }
   }
@@ -134,9 +137,9 @@ class Game {
     ) {
       this.canvas.style.display = "none";
       winScreen.style.display = "flex";
-      this.sound.src = "./docs/assets/sounds/cat-purr.wav";
-      this.sound.loop = false;
-      this.sound.play();
+      this.winSound.src = "./docs/assets/sounds/cat-purr.wav";
+      this.winSound.loop = false;
+      this.winSound.play();
       this.clear();
     }
   }
