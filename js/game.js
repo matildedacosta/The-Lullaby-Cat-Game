@@ -43,7 +43,7 @@ class Game {
     this.canvas.style.display = "flex";
     this.bgSound.play();
     this.bgSound.loop = true;
-    this.bgSound.volume = 0.1;
+    this.bgSound.volume = 0.05;
     this.ctx.clearRect(0, 0, this.width, this.height);
     this.questionsRandomizer();
     this.drawQuestions(this.questions[0]);
@@ -75,12 +75,10 @@ class Game {
   }
 
   isCorrect() {
-    if (this.level === 1) {
-      this.cat.x -= 40;
-    } else if (this.level === 2) {
-      this.cat.x -= 40;
-    } else {
+    if (this.level === 3) {
       this.cat.x -= 75;
+    } else {
+      this.cat.x -= 40;
     }
     this.sound;
     this.askedQuestions++;

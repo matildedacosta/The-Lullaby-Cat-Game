@@ -3,7 +3,7 @@
 const levelOneQuestions = [
   {
     sound: musicalNotes.CFlat,
-    question: "Press the musical note Cb",
+    question: "Press the musical note C♭",
     answer: "J",
   },
   {
@@ -13,12 +13,12 @@ const levelOneQuestions = [
   },
   {
     sound: musicalNotes.CSharp,
-    question: "Press the musical note C#",
+    question: "Press the musical note C♯",
     answer: "W",
   },
   {
     sound: musicalNotes.DFlat,
-    question: "Press the musical note Db",
+    question: "Press the musical note D♭",
     answer: "W",
   },
   {
@@ -28,12 +28,12 @@ const levelOneQuestions = [
   },
   {
     sound: musicalNotes.DSharp,
-    question: "Press the musical note D#",
+    question: "Press the musical note D♯",
     answer: "E",
   },
   {
     sound: musicalNotes.EFlat,
-    question: "Press the musical note Eb",
+    question: "Press the musical note E♭",
     answer: "E",
   },
   {
@@ -43,12 +43,12 @@ const levelOneQuestions = [
   },
   {
     sound: musicalNotes.ESharp,
-    question: "Press the musical note E#",
+    question: "Press the musical note E♯",
     answer: "F",
   },
   {
     sound: musicalNotes.FFlat,
-    question: "Press the musical note Fb",
+    question: "Press the musical note F♭",
     answer: "D",
   },
   {
@@ -58,12 +58,12 @@ const levelOneQuestions = [
   },
   {
     sound: musicalNotes.FSharp,
-    question: "Press the musical note F#",
+    question: "Press the musical note F♯",
     answer: "T",
   },
   {
     sound: musicalNotes.GFlat,
-    question: "Press the musical note Gb",
+    question: "Press the musical note G♭",
     answer: "T",
   },
   {
@@ -73,12 +73,12 @@ const levelOneQuestions = [
   },
   {
     sound: musicalNotes.GSharp,
-    question: "Press the musical note G#",
+    question: "Press the musical note G♯",
     answer: "Y",
   },
   {
     sound: musicalNotes.AFlat,
-    question: "Press the musical note Ab",
+    question: "Press the musical note A♭",
     answer: "Y",
   },
   {
@@ -88,12 +88,12 @@ const levelOneQuestions = [
   },
   {
     sound: musicalNotes.ASharp,
-    question: "Press the musical note A#",
+    question: "Press the musical note A♯",
     answer: "U",
   },
   {
     sound: musicalNotes.BFlat,
-    question: "Press the musical note Bb",
+    question: "Press the musical note B♭",
     answer: "U",
   },
   {
@@ -103,7 +103,7 @@ const levelOneQuestions = [
   },
   {
     sound: musicalNotes.BSharp,
-    question: "Press the musical note B#",
+    question: "Press the musical note B♯",
     answer: "A",
   },
 ];
@@ -115,7 +115,7 @@ const levelOneQuestions = [
 const levelTwoQuestions = [
   {
     sound: musicalNotes.AFlat,
-    question: "Press the perfect fifth of the musical note Cb",
+    question: "Press the perfect fifth of the musical note C♭",
     answer: "T",
   },
   {
@@ -125,12 +125,12 @@ const levelTwoQuestions = [
   },
   {
     sound: musicalNotes.GSharp,
-    question: "Press the perfect fifth of the musical note C#",
+    question: "Press the perfect fifth of the musical note C♯",
     answer: "Y",
   },
   {
     sound: musicalNotes.AFlat,
-    question: "Press the perfect fifth of the musical note Db",
+    question: "Press the perfect fifth of the musical note D♭",
     answer: "Y",
   },
   {
@@ -140,12 +140,12 @@ const levelTwoQuestions = [
   },
   {
     sound: musicalNotes.ASharp,
-    question: "Press the perfect fifth of the musical note D#",
+    question: "Press the perfect fifth of the musical note D♯",
     answer: "U",
   },
   {
     sound: musicalNotes.BFlat,
-    question: "Press the perfect fifth of the musical note Eb",
+    question: "Press the perfect fifth of the musical note E♭",
     answer: "U",
   },
   {
@@ -160,7 +160,7 @@ const levelTwoQuestions = [
   },
   {
     sound: musicalNotes.CSharp,
-    question: "Press the perfect fifth of the musical note F#",
+    question: "Press the perfect fifth of the musical note F♯",
     answer: "W",
   },
   {
@@ -175,12 +175,12 @@ const levelTwoQuestions = [
   },
   {
     sound: musicalNotes.DSharp,
-    question: "Press the perfect fifth of the musical note G#",
+    question: "Press the perfect fifth of the musical note G♯",
     answer: "E",
   },
   {
     sound: musicalNotes.EFlat,
-    question: "Press the perfect fifth of the musical note Ab",
+    question: "Press the perfect fifth of the musical note A♭",
     answer: "E",
   },
   {
@@ -190,12 +190,12 @@ const levelTwoQuestions = [
   },
   {
     sound: musicalNotes.F,
-    question: "Press the perfect fifth of the musical note A#",
+    question: "Press the perfect fifth of the musical note A♯",
     answer: "F",
   },
   {
     sound: musicalNotes.F,
-    question: "Press the perfect fifth of the musical note Bb",
+    question: "Press the perfect fifth of the musical note B♭",
     answer: "F",
   },
   {

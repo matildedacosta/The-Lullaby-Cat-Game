@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
-/* HTML AND CANVAS */
+/* UNIVERSAL */
 body {
   margin: 0 auto;
   box-sizing: border-box;
@@ -13,6 +13,7 @@ body {
   flex-direction: column;
 }
 
+/* HEADING TITLES */
 h1 {
   text-align: center;
   font-size: 60px;
@@ -55,6 +56,8 @@ h6 {
   font-style: italic;
 }
 
+/* HEADER */
+
 header {
   background-color: #ffffff29;
   background-image: url("docs/assets/images/starry-sky.gif");
@@ -68,7 +71,10 @@ header {
   -webkit-text-stroke-color: #dfcccc;
 }
 
+/* SCREENS */
 main {
+  padding: 10px;
+  gap: 10px;
   height: 750px;
   display: flex;
   flex-direction: row;
@@ -96,11 +102,7 @@ main {
   border: none;
 }
 
-ul {
-  list-style-type: none;
-  font-size: 25px;
-  line-height: 1.5;
-}
+/* INSTRUCTIONS */
 
 .instructions {
   width: max(46vw, 400px);
@@ -108,10 +110,17 @@ ul {
   flex-direction: column;
   border: 1px solid rgba(255, 255, 255, 0.495);
   background-color: #ffffff76;
-  min-height: 698px;
+  min-height: 679px;
   padding: 10px;
 }
 
+ul {
+  list-style-type: none;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+/* PIANO INSTRUCTIONS SECTION */
 .piano-info {
   list-style-type: none;
   border: 1px solid rgba(255, 255, 255, 0.495);
@@ -139,6 +148,8 @@ hr {
   margin: 20px 5% 50px;
 }
 
+/* LEVELS INFO */
+
 #levels-info {
   border-top: 1px solid rgba(255, 255, 255, 0.495);
   border-bottom: 1px solid rgba(255, 255, 255, 0.495);
@@ -160,7 +171,7 @@ hr {
 
 .articles {
   width: 750px;
-  height: 450px;
+  height: 510px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -176,14 +187,7 @@ hr {
 
 /* START SCREEN */
 #start-screen {
-  /* width: 950px;
-  height: 700px; */
   display: flex;
-  /* align-items: center;
-  justify-content: center;
-  background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 #start-button,
@@ -192,27 +196,13 @@ img {
   height: 100px;
 }
 
-/* LEVELS SCREEN */
-
-#levels-screen {
-  /* width: 950px;
-  height: 700px; */
-  /* display: none; */
-  /* flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  /* background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
-}
+/* BUTTONS*/
 
 #level-buttons {
   margin: 20px;
   display: flex;
   align-items: center;
 }
-
-/* BUTTON CLASSES*/
 
 .buttons {
   background-color: transparent;
@@ -230,103 +220,3 @@ img {
   display: flex;
   align-items: center;
 }
-
-/* LEVEL 1
-#win-level1-screen {
-  width: 950px;
-  height: 700px;
-  flex-direction: column;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#lose-level1-screen {
-  width: 950px;
-  height: 700px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* LEVEL 2 */
-/* #lose-level2-screen {
-  width: 950px;
-  height: 700px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-/* #win-level2-screen {
-  width: 950px;
-  height: 700px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-/* LEVEL 3 */
-/* #lose-level3-screen {
-  width: 950px;
-  height: 700px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-/* #win-level3-screen {
-  width: 950px;
-  height: 700px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-/* LEVEL 4 */
-/* #lose-level4-screen {
-  width: 950px;
-  height: 700px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-/* #win-level4-screen {
-  width: 950px;
-  height: 700px;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
