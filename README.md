@@ -1,7 +1,7 @@
 # The Lullaby Cat Game
 
-!["docs/assets/images/Screenshot-Game-1.png"]
-!["docs/assets/images/Screenshot-Game-2.png"]
+![Game-Image-1](docs/assets/images/Screenshot-Game-1.png)
+![Game-Image-2](docs/assets/images/Screenshot-Game-2.png)
 
 ## What is this game about?
 
@@ -26,46 +26,48 @@ In the _Fourth Level_ you train your ears! You need to have a piano near you or 
 
 # RULES OF THE GAME
 
-🐾 Check the section below for level information.
-🐾 Use the letters in the piano below to answer.
-🐾 Every question right: the cat moves a step closer to the bed.
-🐾 Every question wrong the cat moves a step backward.
+🐾 Check the section below for level information.<br />
+🐾 Use the letters in the piano below to answer.<br />
+🐾 Every question right: the cat moves a step closer to the bed.<br />
+🐾 Every question wrong the cat moves a step backward.<br />
 
-## WHAT ARE THE LEVELS?
+## THE LEVELS
 
 ### LEVEL ONE
 
 #### Play the note
 
-🐾 Press the key in the computer that represents the musical note asked in the question (check the piano image above).
-🐾 Answer 16 questions correctly to win.
-🐾 Five questions wrong: GAME OVER.
-🐾 Answer in less than 10 seconds.
+🐾 Press the key in the computer that represents the musical note asked in the question (check the piano image above).<br />
+🐾 Answer 16 questions correctly to win.<br />
+🐾 Five questions wrong: GAME OVER.<br />
+🐾 Answer in less than 10 seconds.<br />
 
 ### LEVEL TWO
 
 #### Play the Perfect Fifth
 
-🐾 Press the key in the computer that represents the perfect fifth of the musical note asked in the question (check the piano image above).
-🐾 Answer 13 questions correctly to win.
-🐾 Five questions wrong: GAME OVER.
-🐾 Answer in less than 20 seconds.
+🐾 Press the key in the computer that represents the perfect fifth of the musical note asked in the question (check the piano image above).<br />
+🐾 Answer 13 questions correctly to win.<br />
+🐾 Five questions wrong: GAME OVER.<br />
+🐾 Answer in less than 20 seconds.<br />
 
 ### LEVEL THREE
 
 #### Harmonize the C Major Scale
 
-🐾 Press the keys in the computer that represent the notes in the chords asked in the question (check the piano image above).
-🐾 Answer 5 questions correctly to win.
-🐾 Two questions wrong: GAME OVER.
-🐾 Answer in less than 30 seconds.
+🐾 Press the keys in the computer that represent the notes in the chords asked in the question (check the piano image above).<br />
+🐾 Answer 5 questions correctly to win.<br />
+🐾 Two questions wrong: GAME OVER.<br />
+🐾 Answer in less than 30 seconds.<br />
 
 ### LEVEL FOUR
 
 #### Match the sound to the note
 
-🐾 Press the key in the computer that represents the note played (check the piano image above).
-🐾 Make sure you have a piano near you to confirm the note played.
-🐾 Answer 14 questions correctly to win.
-🐾 Ten questions wrong: GAME OVER.
-🐾 Answer in less than 60 seconds.
+🐾 Press the key in the computer that represents the note played (check the piano image above).<br />
+🐾 Make sure you have a piano near you to confirm the note played.<br />
+🐾 Answer 14 questions correctly to win.<br />
+🐾 Ten questions wrong: GAME OVER.<br />
+🐾 Answer in less than 60 seconds.<br />
+
+[^1]: Enjoy the Game!
