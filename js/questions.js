@@ -275,7 +275,7 @@ const levelFourQuestions = [
   },
   {
     sound: musicalNotes.E,
-    question: "Press the musical note E",
+    question: "What note is this?",
     answer: "D",
   },
   {
@@ -290,7 +290,7 @@ const levelFourQuestions = [
   },
   {
     sound: musicalNotes.F,
-    question: "Press the musical note F",
+    question: "What note is this?",
     answer: "F",
   },
   {

@@ -78,6 +78,7 @@ class Game {
   }
 
   isCorrect() {
+    this.keysDown = [];
     if (this.level === 3) {
       this.cat.x -= 75;
     } else {
@@ -91,21 +92,20 @@ class Game {
     this.correctSound.loop = false;
     this.correctSound.play();
     this.sound.volume = 0.2;
-    this.keysDown = [];
   }
 
   isWrong() {
+    this.keysDown = [];
     if (this.cat.x + this.cat.width < this.width) {
       this.cat.x += 75;
     }
     this.askedQuestions++;
+    this.wrongQuestions += 1;
+    this.questionTime = 0;
     this.wrongSound.src = "./docs/assets/sounds/cat-hiss.wav";
     this.wrongSound.loop = false;
     this.wrongSound.play();
     this.wrongSound.volume = 0.2;
-    this.wrongQuestions += 1;
-    this.questionTime = 0;
-    this.keysDown = [];
   }
 
   checkGameover() {

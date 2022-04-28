@@ -227,4 +227,5 @@ window.addEventListener("keydown", (e) => {
       game.isWrong();
     }
   }
+  console.log(game.keysDown);
 });
