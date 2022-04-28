@@ -1,47 +1,33 @@
 const musicalNotes = {
-  CFlat: new Audio("./docs/assets/sounds/Musical Notes/B_1.wav"),
-  C: new Audio("./docs/assets/sounds/Musical Notes/C_1.wav"),
-  CSharp: new Audio("./docs/assets/sounds/Musical Notes/C#_1.wav"),
-  DFlat: new Audio("./docs/assets/sounds/Musical Notes/C#_1.wav"),
-  D: new Audio("./docs/assets/sounds/Musical Notes/D_1.wav"),
-  DSharp: new Audio("./docs/assets/sounds/Musical Notes/D#_1.wav"),
-  EFlat: new Audio("./docs/assets/sounds/Musical Notes/D#_1.wav"),
-  E: new Audio("./docs/assets/sounds/Musical Notes/E_1.wav"),
-  ESharp: new Audio("./docs/assets/sounds/Musical Notes/F_1.wav"),
-  FFlat: new Audio("./docs/assets/sounds/Musical Notes/E_1.wav"),
-  F: new Audio("./docs/assets/sounds/Musical Notes/F_1.wav"),
-  FSharp: new Audio("./docs/assets/sounds/Musical Notes/F#_1.wav"),
-  GFlat: new Audio("./docs/assets/sounds/Musical Notes/F#_1.wav"),
-  G: new Audio("./docs/assets/sounds/Musical Notes/G_1.wav"),
-  GSharp: new Audio("./docs/assets/sounds/Musical Notes/G#_1.wav"),
-  AFlat: new Audio("./docs/assets/sounds/Musical Notes/G#_1.wav"),
-  A: new Audio("./docs/assets/sounds/Musical Notes/A_1.wav"),
-  ASharp: new Audio("./docs/assets/sounds/Musical Notes/A#_1.wav"),
-  BFlat: new Audio("./docs/assets/sounds/Musical Notes/A#_1.wav"),
-  B: new Audio("./docs/assets/sounds/Musical Notes/B_1.wav"),
-  BSharp: new Audio("./docs/assets/sounds/Musical Notes/C_1.wav"),
+  CFlat: new Audio("./docs/assets/sounds/musical_notes/B_1.wav"),
+  C: new Audio("./docs/assets/sounds/musical_notes/C_1.wav"),
+  CSharp: new Audio("./docs/assets/sounds/musical_notes/CSharp_1.wav"),
+  DFlat: new Audio("./docs/assets/sounds/musical_notes/CSharp_1.wav"),
+  D: new Audio("./docs/assets/sounds/musical_notes/D_1.wav"),
+  DSharp: new Audio("./docs/assets/sounds/musical_notes/DSharp_1.wav"),
+  EFlat: new Audio("./docs/assets/sounds/musical_notes/DSharp_1.wav"),
+  E: new Audio("./docs/assets/sounds/musical_notes/E_1.wav"),
+  ESharp: new Audio("./docs/assets/sounds/musical_notes/F_1.wav"),
+  FFlat: new Audio("./docs/assets/sounds/musical_notes/E_1.wav"),
+  F: new Audio("./docs/assets/sounds/musical_notes/F_1.wav"),
+  FSharp: new Audio("./docs/assets/sounds/musical_notes/FSharp_1.wav"),
+  GFlat: new Audio("./docs/assets/sounds/musical_notes/FSharp_1.wav"),
+  G: new Audio("./docs/assets/sounds/musical_notes/G_1.wav"),
+  GSharp: new Audio("./docs/assets/sounds/musical_notes/GSharp_1.wav"),
+  AFlat: new Audio("./docs/assets/sounds/musical_notes/GSharp_1.wav"),
+  A: new Audio("./docs/assets/sounds/musical_notes/A_1.wav"),
+  ASharp: new Audio("./docs/assets/sounds/musical_notes/ASharp_1.wav"),
+  BFlat: new Audio("./docs/assets/sounds/musical_notes/ASharp_1.wav"),
+  B: new Audio("./docs/assets/sounds/musical_notes/B_1.wav"),
+  BSharp: new Audio("./docs/assets/sounds/musical_notes/C_1.wav"),
 };
 
 const chordsCMajorScale = {
-  CMajor: new Audio(
-    "./docs/assets/sounds/Chords in the C Major Scale/CMajor_1.wav"
-  ),
-  Dminor: new Audio(
-    "./docs/assets/sounds/Chords in the C Major Scale/Dminor_1"
-  ),
-  Eminjor: new Audio(
-    "./docs/assets/sounds/Chords in the C Major Scale/Eminor_1"
-  ),
-  FMajor: new Audio(
-    "./docs/assets/sounds/Chords in the C Major Scale/Fmajor_1"
-  ),
-  GMajor: new Audio(
-    "./docs/assets/sounds/Chords in the C Major Scale/Gmajor_1"
-  ),
-  Aminor: new Audio(
-    "./docs/assets/sounds/Chords in the C Major Scale/Aminor_1"
-  ),
-  Bdiminished: new Audio(
-    "./docs/assets/sounds/Chords in the C Major Scale/Bdiminished_1.wav"
-  ),
+  CMajor: new Audio("./docs/assets/sounds/chords/CMajor_1.wav"),
+  Dminor: new Audio("./docs/assets/sounds/chords/Dminor.wav"),
+  Eminor: new Audio("./docs/assets/sounds/chords/Eminor_1.wav"),
+  FMajor: new Audio("./docs/assets/sounds/chords/FMajor_1.wav"),
+  GMajor: new Audio("./docs/assets/sounds/chords/GMajor_1.wav"),
+  Aminor: new Audio("./docs/assets/sounds/chords/Aminor.wav"),
+  Bdiminished: new Audio("./docs/assets/sounds/chords/Bdiminished_1.wav"),
 };

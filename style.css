@@ -2,7 +2,8 @@
 
 /* HTML AND CANVAS */
 body {
-  margin: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
   background-image: url("docs/assets/images/starry-sky.gif");
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,10 +71,30 @@ header {
 
 main {
   height: 750px;
-  margin: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game-screen {
+  width: 950px;
+  height: 700px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#canvas {
+  background-image: url("docs/assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  border: none;
 }
 
 ul {
@@ -120,13 +141,6 @@ ul {
   display: flex;
 }
 
-#canvas {
-  background-image: url("docs/assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: none;
-}
-
 #levels-info {
   border-top: 1px solid rgba(255, 255, 255, 0.495);
   border-bottom: 1px solid rgba(255, 255, 255, 0.495);
@@ -137,6 +151,13 @@ ul {
   align-items: center;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: #dfcccc;
+}
+
+.each-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .articles {
@@ -157,14 +178,14 @@ ul {
 
 /* START SCREEN */
 #start-screen {
-  width: 950px;
-  height: 700px;
+  /* width: 950px;
+  height: 700px; */
   display: flex;
-  align-items: center;
+  /* align-items: center;
   justify-content: center;
   background-image: url("docs/assets/images/bg.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 #start-button,
@@ -174,23 +195,17 @@ img {
 }
 
 /* LEVELS SCREEN */
-.each-level {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 #levels-screen {
-  width: 950px;
-  height: 700px;
-  display: none;
-  flex-direction: column;
+  /* width: 950px;
+  height: 700px; */
+  /* display: none; */
+  /* flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-image: url("docs/assets/images/bg.jpg");
+  justify-content: center; */
+  /* background-image: url("docs/assets/images/bg.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 #level-buttons {
@@ -218,7 +233,7 @@ img {
   align-items: center;
 }
 
-/* LEVEL 1 */
+/* LEVEL 1
 #win-level1-screen {
   width: 950px;
   height: 700px;
@@ -244,7 +259,7 @@ img {
 }
 
 /* LEVEL 2 */
-#lose-level2-screen {
+/* #lose-level2-screen {
   width: 950px;
   height: 700px;
   display: none;
@@ -254,9 +269,9 @@ img {
   background-image: url("docs/assets/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
-#win-level2-screen {
+/* #win-level2-screen {
   width: 950px;
   height: 700px;
   display: none;
@@ -266,10 +281,10 @@ img {
   background-image: url("docs/assets/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 /* LEVEL 3 */
-#lose-level3-screen {
+/* #lose-level3-screen {
   width: 950px;
   height: 700px;
   display: none;
@@ -279,9 +294,9 @@ img {
   background-image: url("docs/assets/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
-#win-level3-screen {
+/* #win-level3-screen {
   width: 950px;
   height: 700px;
   display: none;
@@ -291,10 +306,10 @@ img {
   background-image: url("docs/assets/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 /* LEVEL 4 */
-#lose-level4-screen {
+/* #lose-level4-screen {
   width: 950px;
   height: 700px;
   display: none;
@@ -304,9 +319,9 @@ img {
   background-image: url("docs/assets/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
-#win-level4-screen {
+/* #win-level4-screen {
   width: 950px;
   height: 700px;
   display: none;
@@ -316,4 +331,4 @@ img {
   background-image: url("docs/assets/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */

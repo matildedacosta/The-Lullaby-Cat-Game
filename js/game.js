@@ -1,6 +1,4 @@
-//Sound of questions, where do I call it?
 //CANVAS SIZE VS SCREEN SIZES
-//CheckWin() --> check length?
 //Change 'you win' and 'you lose' to more exciting images?
 
 class Game {
@@ -45,7 +43,7 @@ class Game {
     this.canvas.style.display = "flex";
     this.bgSound.play();
     this.bgSound.loop = true;
-    this.bgSound.volume = 0.3;
+    this.bgSound.volume = 0.1;
     this.ctx.clearRect(0, 0, this.width, this.height);
     this.questionsRandomizer();
     this.drawQuestions(this.questions[0]);
@@ -91,6 +89,7 @@ class Game {
     this.sound.src = "./docs/assets/sounds/cat-meow.wav";
     this.sound.loop = false;
     this.sound.play();
+    this.sound.volume = 0.2;
     this.keysDown = [];
   }
 
@@ -102,6 +101,7 @@ class Game {
     this.sound.src = "./docs/assets/sounds/cat-hiss.wav";
     this.sound.loop = false;
     this.sound.play();
+    this.sound.volume = 0.2;
     this.wrongQuestions += 1;
     this.questionTime = 0;
     this.keysDown = [];
@@ -122,28 +122,13 @@ class Game {
 
   checkWin() {
     let winScreen = document.getElementById(`win-level${this.level}-screen`);
-    if (this.level === 1 && this.rightQuestions >= 18) {
-      this.canvas.style.display = "none";
-      winScreen.style.display = "flex";
-      this.sound.src = "./docs/assets/sounds/cat-purr.wav";
-      this.sound.loop = false;
-      this.sound.play();
-      this.clear();
-    } else if (this.level === 2 && this.rightQuestions >= 16) {
-      this.canvas.style.display = "none";
-      winScreen.style.display = "flex";
-      this.sound.src = "./docs/assets/sounds/cat-purr.wav";
-      this.sound.loop = false;
-      this.sound.play();
-      this.clear();
-    } else if (this.level === 3 && this.rightQuestions >= 5) {
-      this.canvas.style.display = "none";
-      winScreen.style.display = "flex";
-      this.sound.src = "./docs/assets/sounds/cat-purr.wav";
-      this.sound.loop = false;
-      this.sound.play();
-      this.clear();
-    } else if (this.level === 4 && this.rightQuestions >= 9) {
+
+    if (
+      (this.level === 1 && this.rightQuestions >= 18) ||
+      (this.level === 2 && this.rightQuestions >= 16) ||
+      (this.level === 3 && this.rightQuestions >= 5) ||
+      (this.level === 4 && this.rightQuestions >= 9)
+    ) {
       this.canvas.style.display = "none";
       winScreen.style.display = "flex";
       this.sound.src = "./docs/assets/sounds/cat-purr.wav";
@@ -162,6 +147,7 @@ class Game {
     this.ctx.fillStyle = "white";
     this.ctx.textAlign = "center";
     this.ctx.fillText(question.question, 450, 350);
+    question.sound.play();
   }
 
   drawScore() {
