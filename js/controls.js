@@ -80,7 +80,7 @@ level1Button.addEventListener("click", () => {
 level2Button.addEventListener("click", () => {
   startScreen.style.display = "none";
   levelsScreen.style.display = "none";
-  game = new Game(levelTwoQuestions, 2, "35px VT323", 12);
+  game = new Game(levelTwoQuestions, 2, "35px VT323", 18);
   game.start();
 });
 
@@ -114,20 +114,20 @@ restartLevel1LoseButton.addEventListener("click", () => {
 });
 nextLevel2Button.addEventListener("click", () => {
   winScreenLevel1.style.display = "none";
-  game = new Game(levelTwoQuestions, 2, "30px VT323", 12);
+  game = new Game(levelTwoQuestions, 2, "30px VT323", 18);
   game.start();
 });
 
 //LEVEL 2 BUTTONS
 restartLevel2WinButton.addEventListener("click", () => {
   winScreenLevel2.style.display = "none";
-  game = new Game(levelTwoQuestions, 2, "30px VT323", 12);
+  game = new Game(levelTwoQuestions, 2, "30px VT323", 18);
   game.start();
 });
 
 restartLevel2LoseButton.addEventListener("click", () => {
   loseScreenLevel2.style.display = "none";
-  game = new Game(levelTwoQuestions, 2, "30px VT323", 12);
+  game = new Game(levelTwoQuestions, 2, "30px VT323", 18);
   game.start();
 });
 

@@ -1,10 +1,8 @@
 //Sound of questions, where do I call it?
-//Augment amount of questions of second level
 //CANVAS SIZE VS SCREEN SIZES
-//Put captions in the levels section
-//Change 'you win' and 'you lose' to more exciting images
-//put sound with the game over and win game
+//LEVELS SECTION
 //CheckWin() --> check length?
+//Change 'you win' and 'you lose' to more exciting images
 
 class Game {
   constructor(initialQuestions, level, font, numberOfQuestions) {
@@ -45,10 +43,10 @@ class Game {
   }
 
   start() {
+    this.canvas.style.display = "flex";
     this.bgSound.play();
     this.bgSound.loop = true;
     this.bgSound.volume = 0.3;
-    this.canvas.style.display = "flex";
     this.ctx.clearRect(0, 0, this.width, this.height);
     this.questionsRandomizer();
     this.drawQuestions(this.questions[0]);
@@ -81,7 +79,9 @@ class Game {
 
   isCorrect() {
     if (this.level === 1) {
-      this.cat.x -= 45;
+      this.cat.x -= 40;
+    } else if (this.level === 2) {
+      this.cat.x -= 40;
     } else {
       this.cat.x -= 75;
     }
@@ -96,10 +96,10 @@ class Game {
   }
 
   isWrong() {
-    this.askedQuestions++;
     if (this.cat.x + this.cat.width < this.width) {
       this.cat.x += 75;
     }
+    this.askedQuestions++;
     this.sound.src = "docs/assets/sounds/cat-hiss.wav";
     this.sound.loop = false;
     this.sound.play();
@@ -123,15 +123,14 @@ class Game {
 
   checkWin() {
     let winScreen = document.getElementById(`win-level${this.level}-screen`);
-
-    if (this.level === 1 && this.rightQuestions >= 16) {
+    if (this.level === 1 && this.rightQuestions >= 18) {
       this.canvas.style.display = "none";
       winScreen.style.display = "flex";
       this.sound.src = "docs/assets/sounds/cat-purr.wav";
       this.sound.loop = false;
       this.sound.play();
       this.clear();
-    } else if (this.level === 2 && this.rightQuestions >= 9) {
+    } else if (this.level === 2 && this.rightQuestions >= 16) {
       this.canvas.style.display = "none";
       winScreen.style.display = "flex";
       this.sound.src = "docs/assets/sounds/cat-purr.wav";
