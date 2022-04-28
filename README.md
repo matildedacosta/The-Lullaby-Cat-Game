@@ -24,16 +24,16 @@ In the _Third Level_ you train your knowledge on the harmonized C Major Scale. T
 
 In the _Fourth Level_ you train your ears! You need to have a piano near you or an app on your phone (e.g. app called Piano). The cat will play you a sound and you need to figure out what note it is meowing!
 
-# RULES OF THE GAME
+# Rules of the game
 
 🐾 Check the section below for level information.<br />
 🐾 Use the letters in the piano below to answer.<br />
 🐾 Every question right: the cat moves a step closer to the bed.<br />
 🐾 Every question wrong the cat moves a step backward.<br />
 
-## THE LEVELS
+## Levels
 
-### LEVEL ONE
+### Level One
 
 #### Play the note
 
@@ -42,7 +42,7 @@ In the _Fourth Level_ you train your ears! You need to have a piano near you or 
 🐾 Five questions wrong: GAME OVER.<br />
 🐾 Answer in less than 10 seconds.<br />
 
-### LEVEL TWO
+### Level Two
 
 #### Play the Perfect Fifth
 
@@ -51,7 +51,7 @@ In the _Fourth Level_ you train your ears! You need to have a piano near you or 
 🐾 Five questions wrong: GAME OVER.<br />
 🐾 Answer in less than 20 seconds.<br />
 
-### LEVEL THREE
+### Level Three
 
 #### Harmonize the C Major Scale
 
@@ -60,7 +60,7 @@ In the _Fourth Level_ you train your ears! You need to have a piano near you or 
 🐾 Two questions wrong: GAME OVER.<br />
 🐾 Answer in less than 30 seconds.<br />
 
-### LEVEL FOUR
+### Level Four
 
 #### Match the sound to the note
 
@@ -70,4 +70,6 @@ In the _Fourth Level_ you train your ears! You need to have a piano near you or 
 🐾 Ten questions wrong: GAME OVER.<br />
 🐾 Answer in less than 60 seconds.<br />
 
-[^1]: Enjoy the Game!
+<br />
+
+♫ Have fun, love cats and love music! ♫
