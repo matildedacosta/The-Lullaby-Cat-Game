@@ -12,13 +12,13 @@ When you lose a level, the cat will advice you to restart the same level or go b
 
 ## How will this game help me with my musical knowledge?
 
-Each level focuses on different areas of music theory and, in each specific level, you develop your skills in different ways. Simultaneasly, this helps music producers develop their muscle memory, when there's no MIDI keyboard around and you really want to get your ideas out: computer piano it is!
+Each level focuses on different areas of music theory and, in each specific level, you develop your skills in different ways. Simultaneasly, this helps music producers develop their muscle memory: when there's no MIDI keyboard around and you really want to get your ideas out use your 'computer piano'!
 
-**Note: Throughout the game, on the left side of the screen, there is an image of the piano with the corresponding letters of the computer keyboard**
+**Note: Throughout the game, on the left side of the screen, there will be an image of the piano with the corresponding letters of the computer keyboard.**
 
-In the _First Level_ you mostly train your knowledge on the placement of the musical notes in the piano. The cat asks you for a specific note and you need to press the key in the computer keyboard that matches with the note placement in the piano.
+In the _First Level_ you mostly train your knowledge on the musical notes placement in the piano. The cat asks you for a specific note and you need to press the key in the computer keyboard that matches with the note placement in the piano.
 
-In the _Second Level_ you train your knowledge on perfects fifths. The cat asks you for the perfect fifth of a specific note and you need to press the key in the computer keyboard that matches with the note placement in the piano of the perfect fifth of that note.
+In the _Second Level_ you train your knowledge on perfects fifths. The cat asks you for the perfect fifth of a specific note and you need to press the key in the computer keyboard that represents the perfect fifth of note asked.
 
 In the _Third Level_ you train your knowledge on the harmonized C Major Scale. The cat asks you for a chord that exists in the C Major Scale and you have to press all the notes that are in that chord. **_ You can only use the computer keys that are specified in the picture of the piano, this means you will need to use inversions. _**
 
